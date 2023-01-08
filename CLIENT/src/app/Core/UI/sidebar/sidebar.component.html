@@ -1,0 +1,59 @@
+<nav class="sidebar close" [ngClass]="{'close': sidebar_collapse }">
+  <header>
+    <div class="image-text">
+      <span class="image">
+        <img src="../../../assets/Orascom_Construction.png" alt="">
+      </span>
+      <div class="text logo-text">
+        <span class="name">Orascom Panel</span>
+      </div>
+    </div>
+    <mat-icon aria-hidden="burger menu" class="toggle" (click)="onSidebarCollapse()">segment</mat-icon>
+  </header>
+
+  <div class="menu-bar">
+    <div class="menu">
+      <ul class="menu-links">
+        <li class="nav-link">
+          <a href="#">
+            <mat-icon aria-hidden="false" aria-label="Example home icon  " class="_icon ">home</mat-icon>
+            <span class="text nav-text">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-link">
+          <a href="#">
+            <mat-icon aria-hidden="false" aria-label="Example home icon" class="_icon">request_page</mat-icon>
+
+            <span class="text nav-text"> Request</span>
+          </a>
+        </li>
+
+        <li class="nav-link">
+          <a href="#">
+            <mat-icon aria-hidden="false" aria-label="Example home icon" class="_icon">bar_chart</mat-icon>
+
+            <span class="text nav-text">Analytics
+            </span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="bottom-content">
+      <li class="">
+        <a href="#">
+          <mat-icon aria-hidden="false" aria-label="Example home icon" class="_icon ">settings</mat-icon>
+          <span class="text nav-text">Setting</span>
+        </a>
+      </li>
+      <li class="">
+        <a href="#">
+          <mat-icon aria-hidden="false" aria-label="Example home icon" class="_icon ">logout</mat-icon>
+          <span class="text nav-text">Logout</span>
+        </a>
+      </li>
+    </div>
+  </div>
+
+</nav>
