@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SideProjects\\DatingApp\\API\\API.csproj": {}
+    "d:\\SideProjects\\DatingApp\\API\\API.csproj": {}
   },
   "projects": {
-    "D:\\SideProjects\\DatingApp\\API\\API.csproj": {
+    "d:\\SideProjects\\DatingApp\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SideProjects\\DatingApp\\API\\API.csproj",
+        "projectUniqueName": "d:\\SideProjects\\DatingApp\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\SideProjects\\DatingApp\\API\\API.csproj",
+        "projectPath": "d:\\SideProjects\\DatingApp\\API\\API.csproj",
         "packagesPath": "C:\\Users\\Mahmoud.Ghonamie\\.nuget\\packages\\",
-        "outputPath": "D:\\SideProjects\\DatingApp\\API\\obj\\",
+        "outputPath": "d:\\SideProjects\\DatingApp\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mahmoud.Ghonamie\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -21,7 +21,6 @@
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,6 +39,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -53,6 +56,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.25.1, )"
             }
           },
           "imports": [
