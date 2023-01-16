@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-around center">
+
+    <div fxLayout="row" fxLayoutAlign="center center"><span>InstaMatch</span> </div>
+
+    <ul fxLayout="row" fxLayoutAlign="center center">
+      <li>Matches</li>
+      <li>Lists</li>
+      <li>Messages</li>
+    </ul>
+
+    <div class="login_container" style="max-height:15px !important ;" fxLayout="row" fxLayoutAlign="center center"
+      [formGroup]="profileForm" >
+      <input type="text" id="username" formControlName="userName" placeholder="UserName" class="input">
+      <input type="password" id="password" formControlName="password"  placeholder="password"
+        class="input">
+      <button (click)="onLogIn()" mat-raised-button class="login_btn" color="primary">Log In</button>
+
+    </div>
+
+  </mat-toolbar-row>
+</mat-toolbar>
