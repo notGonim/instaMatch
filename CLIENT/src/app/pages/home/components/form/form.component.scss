@@ -1,0 +1,42 @@
+.container {
+  text-align: center;
+  margin: 10px;
+
+  .title {
+    font-size: 32px;
+    font-family: 'Roboto';
+    font-weight: 600;
+    color: #59CE8F;
+  }
+
+  .input {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    margin-right: 0.4rem;
+  }
+
+}
+
+.btn {
+  font-size: 1.2rem;
+  width: 20%;
+  color: #fff;
+  padding: 0.4rem;
+  margin: 1rem 1rem;
+}
+
+.register-btn {
+  @extend .btn;
+  background-color: #54B435;
+}
+
+.cancel-btn {
+  @extend .btn;
+  background-color: #bdd191;
+}

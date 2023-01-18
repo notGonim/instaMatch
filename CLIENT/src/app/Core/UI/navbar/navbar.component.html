@@ -3,20 +3,38 @@
 
     <div fxLayout="row" fxLayoutAlign="center center"><span>InstaMatch</span> </div>
 
-    <ul fxLayout="row" fxLayoutAlign="center center">
-      <li>Matches</li>
-      <li>Lists</li>
-      <li>Messages</li>
-    </ul>
+    <ng-container *ngIf="currentUser$|async; else userOut">
 
-    <div class="login_container" style="max-height:15px !important ;" fxLayout="row" fxLayoutAlign="center center"
-      [formGroup]="profileForm" >
-      <input type="text" id="username" formControlName="userName" placeholder="UserName" class="input">
-      <input type="password" id="password" formControlName="password"  placeholder="password"
-        class="input">
-      <button (click)="onLogIn()" mat-raised-button class="login_btn" color="primary">Log In</button>
+      <ul fxLayout="row" fxLayoutAlign="center center">
+        <li>Matches</li>
+        <li>Lists</li>
+        <li>Messages</li>
+      </ul>
 
-    </div>
+      <div class="dropdown">
+        <button class="dropbtn" mat-raised-button>Gonim<mat-icon>arrow_drop_down</mat-icon></button>
+        <div class="dropdown-content">
+          <button class="btn_select">Edit Profile</button>
+          <hr>
+          <button class="btn_select" (click)="onLogOut()">LogOut</button>
+        </div>
+      </div>
+
+    </ng-container>
+
+
+    <ng-template #userOut>
+
+      <div class="login_container" style="max-height:15px !important ;" fxLayout="row" fxLayoutAlign="center center"
+        [formGroup]="profileForm">
+        <input type="text" id="username" formControlName="userName" placeholder="UserName" class="input">
+        <input type="password" id="password" formControlName="password" placeholder="password" class="input">
+        <button (click)="onLogIn()" mat-raised-button class="login_btn" color="primary">Log In</button>
+      </div>
+
+    </ng-template>
+
+
 
   </mat-toolbar-row>
 </mat-toolbar>

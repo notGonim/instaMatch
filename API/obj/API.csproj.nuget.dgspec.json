@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\SideProjects\\DatingApp\\API\\API.csproj": {}
+    "D:\\SideProjects\\DatingApp\\API\\API.csproj": {}
   },
   "projects": {
-    "d:\\SideProjects\\DatingApp\\API\\API.csproj": {
+    "D:\\SideProjects\\DatingApp\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\SideProjects\\DatingApp\\API\\API.csproj",
+        "projectUniqueName": "D:\\SideProjects\\DatingApp\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "d:\\SideProjects\\DatingApp\\API\\API.csproj",
+        "projectPath": "D:\\SideProjects\\DatingApp\\API\\API.csproj",
         "packagesPath": "C:\\Users\\Mahmoud.Ghonamie\\.nuget\\packages\\",
-        "outputPath": "d:\\SideProjects\\DatingApp\\API\\obj\\",
+        "outputPath": "D:\\SideProjects\\DatingApp\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mahmoud.Ghonamie\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -21,6 +21,7 @@
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -47,11 +48,11 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[6.0.0-rc.1.21452.10, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.1, )"
+              "version": "[6.0.0-rc.1.21452.10, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

@@ -1,0 +1,10 @@
+<div class="container" [formGroup]="registerForm" fxLayout="row" fxLayoutAlign="center center">
+  <div class="form">
+    <h2 class="title">Sign Up</h2>
+    <input type="text" id="username" formControlName="userName" placeholder="UserName" class="input">
+    <input type="password" id="password" formControlName="password" placeholder="password" class="input">
+    <button class="register-btn" mat-raised-button type="submit" color="primary"
+      (click)="formRegister()">Register</button>
+    <button class="cancel-btn" mat-raised-button color="primary" (click)="cancel()">Cancel</button>
+  </div>
+</div>

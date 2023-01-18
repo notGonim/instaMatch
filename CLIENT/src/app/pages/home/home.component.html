@@ -1,0 +1,20 @@
+<div class="container" fxLayout="row" fxLayoutAlign="center center">
+
+  <div class="registerMode" *ngIf="!registerMode;else registerForm">
+
+    <h1 class="title">Find Your Match</h1>
+    <p class="subTitle">
+      Come on in to view your match... all you need to do sign up!
+    </p>
+    <div class="btns" fxLayout="row" fxLayoutAlign="center center">
+      <button class="register-btn" mat-raised-button color="primary" (click)="registerToggle()">Register</button>
+      <button class="learn-more-btn" mat-raised-button color="primary"> Learn More</button>
+    </div>
+
+  </div>
+
+  <ng-template class="register-container" #registerForm>
+    <app-form (cancelRegistered)="cancelRegisteredMode($event)"></app-form>
+  </ng-template>
+
+</div>

@@ -1,0 +1,47 @@
+.container {
+  height: 50vh;
+
+  .registerMode {
+    text-align: center;
+    margin-top: 32px;
+  }
+
+  .title {
+    font-size: 32px;
+    font-family: 'Roboto';
+    font-weight: 500;
+  }
+
+  .subTitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: grey;
+  }
+
+  .btns {
+    margin: 10px;
+
+    .btn {
+      font-size: 1.2rem;
+      width: 30%;
+      color: #fff;
+      padding: 0.4rem;
+      margin: 0 1rem;
+    }
+
+    .register-btn {
+      @extend .btn;
+      background-color: #54B435;
+    }
+
+    .learn-more-btn {
+      @extend .btn;
+      background-color: #bdd191;
+    }
+  }
+
+
+
+
+
+}

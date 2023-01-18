@@ -12,13 +12,19 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './pages/home/home.component';
+import { FormComponent } from './pages/home/components/form/form.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    NavbarComponent
+    NavbarComponent,
+    HomeComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +35,7 @@ import { MatButtonModule } from '@angular/material/button';
     FlexLayoutModule,
     MatInputModule,
     MatFormFieldModule,
-    MatButtonModule, ReactiveFormsModule
+    MatButtonModule, ReactiveFormsModule, HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

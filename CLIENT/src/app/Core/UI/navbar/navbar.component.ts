@@ -1,5 +1,8 @@
+import { IUserLog } from './../../interfaces/account';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AccountService } from '../../services/account.service';
+import { Observable } from 'rxjs';
 
 
 
@@ -10,11 +13,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class NavbarComponent implements OnInit {
 
+  currentUser$: Observable<IUserLog | null>;
 
-
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private accountService: AccountService) { }
 
   ngOnInit(): void {
+    this.currentUser$ = this.accountService.currentUser$
   }
 
   profileForm: FormGroup = this.fb.group({
@@ -23,8 +27,18 @@ export class NavbarComponent implements OnInit {
   });
 
   onLogIn() {
-    console.log("Form Values : ", this.profileForm.value)
+    this.accountService.logIn(this.profileForm.value).subscribe(res => {
+      console.log(res)
+        , (err: any) => {
+          console.log(err)
+        }
+    })
   }
+
+  onLogOut() {
+    this.accountService.logOut()
+  }
+
 
 
 
