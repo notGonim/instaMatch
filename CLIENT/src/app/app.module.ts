@@ -15,6 +15,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './pages/home/home.component';
 import { FormComponent } from './pages/home/components/form/form.component';
+import { UsersComponent } from './pages/users/users.component';
+import { UserListComponent } from './pages/users/components/user-list/user-list.component';
+import { UserDetailsComponent } from './pages/users/components/user-details/user-details.component';
+import { MessagesComponent } from './pages/messages/messages.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 
@@ -24,7 +29,11 @@ import { FormComponent } from './pages/home/components/form/form.component';
     SidebarComponent,
     NavbarComponent,
     HomeComponent,
-    FormComponent
+    FormComponent,
+    UsersComponent,
+    UserListComponent,
+    UserDetailsComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +44,8 @@ import { FormComponent } from './pages/home/components/form/form.component';
     FlexLayoutModule,
     MatInputModule,
     MatFormFieldModule,
-    MatButtonModule, ReactiveFormsModule, HttpClientModule
+    MatButtonModule, ReactiveFormsModule, HttpClientModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

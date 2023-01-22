@@ -1,18 +1,18 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-around center">
 
-    <div fxLayout="row" fxLayoutAlign="center center"><span>InstaMatch</span> </div>
+    <div fxLayout="row" fxLayoutAlign="center center"> <a class="home-icon" routerLink="/" routerLinkActive="active"><span>InstaMatch</span></a> </div>
 
-    <ng-container *ngIf="currentUser$|async; else userOut">
+    <ng-container *ngIf="(currentUser$|async)as user; else userOut">
 
       <ul fxLayout="row" fxLayoutAlign="center center">
-        <li>Matches</li>
-        <li>Lists</li>
-        <li>Messages</li>
+        <li > <a routerLink="/users" routerLinkActive="active" class="link">Matches</a></li>
+        <li><a routerLink="/list" routerLinkActive="active" class="link">Lists</a></li>
+        <li><a routerLink="/messages" routerLinkActive="active" class="link">Messages</a></li>
       </ul>
 
       <div class="dropdown">
-        <button class="dropbtn" mat-raised-button>Gonim<mat-icon>arrow_drop_down</mat-icon></button>
+        <button class="dropbtn" mat-raised-button> {{user.userName |titlecase}}  <mat-icon>arrow_drop_down</mat-icon></button>
         <div class="dropdown-content">
           <button class="btn_select">Edit Profile</button>
           <hr>

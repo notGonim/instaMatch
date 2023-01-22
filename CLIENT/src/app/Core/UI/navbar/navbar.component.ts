@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AccountService } from '../../services/account.service';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 
@@ -15,7 +17,7 @@ export class NavbarComponent implements OnInit {
 
   currentUser$: Observable<IUserLog | null>;
 
-  constructor(private fb: FormBuilder, private accountService: AccountService) { }
+  constructor(private fb: FormBuilder, private accountService: AccountService, private route: Router, private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.currentUser$ = this.accountService.currentUser$
@@ -28,15 +30,22 @@ export class NavbarComponent implements OnInit {
 
   onLogIn() {
     this.accountService.logIn(this.profileForm.value).subscribe(res => {
-      console.log(res)
+      this.route.navigateByUrl("/users")
+      this._snackBar.open("Welcome Back :)", 'Close', {
+        duration: 3000
+      })
         , (err: any) => {
-          console.log(err)
+
+          this._snackBar.open(err);
+
         }
     })
   }
 
   onLogOut() {
     this.accountService.logOut()
+    this.route.navigateByUrl("/")
+
   }
 
 
